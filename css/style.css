@@ -105,6 +105,11 @@ input {
   gap: 10px;
 }
 
+.task i {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
 .task-wrap .task{
   display: flex;
   justify-content: space-between;

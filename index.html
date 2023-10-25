@@ -29,7 +29,7 @@
           <p :class="{ taskDone: todos[index].done }">
             {{ todos[index].text }}
           </p>
-          <i class="fa-solid fa-x"></i>
+          <i @click.stop="deleteTask(index)" class="fa-solid fa-x"></i>
         </li>
       </ul>
 

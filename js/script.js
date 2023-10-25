@@ -36,6 +36,10 @@ createApp({
         this.todos[indexTask].done = false
       }
     },
+    // cancello completamente la task
+    deleteTask(currIndex) {
+      this.todos.splice(currIndex, 1);
+    }
   },
 
   mounted() {
