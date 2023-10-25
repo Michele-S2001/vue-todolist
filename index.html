@@ -9,22 +9,29 @@
   <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
-  
+  <!-- app -->
   <div id="app">
+
     <!-- container -->
     <div class="container">
+
       <!-- title -->
       <h1 id="todo-title">TODO LIST</h1>
+
       <!-- error message -->
       <span v-if="error" class="error">Inserire almeno 5 caratteri</span>
+
       <!-- input field ==> input + button -->
       <div class="input-field">
+        <!-- input field to write your task -->
         <input @keyup.enter="addTask()" class="input-text" type="text" placeholder="Inserisci una task" v-model="taskInput">
+        <!-- submit task button -->
         <button @click="addTask()" class="cta">ADD</button>
       </div>
 
       <!-- Task section -->
       <ul v-if="isThereTasks()" class="task-wrap">
+        <!-- task template -->
         <li class="task" v-for="(task, index) in todos" :key="index" @click="isDone(index)">
           <p :class="{ taskDone: todos[index].done }">
             {{ todos[index].text }}
@@ -32,13 +39,15 @@
           <i @click.stop="deleteTask(index)" class="fa-solid fa-x"></i>
         </li>
       </ul>
+      <!-- end task section -->
 
+      <!-- message if you don't have any tasks -->
       <h3 v-else>NON HAI NULLA DA FARE 😜</h3>
 
     </div>
     <!-- end container -->
   </div>
-
+  <!-- end app -->
   <script src="./js/script.js"></script>
 </body>
 </html>
