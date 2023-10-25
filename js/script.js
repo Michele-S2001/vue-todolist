@@ -6,19 +6,13 @@ createApp({
     return {
       todos: [],
       taskInput: '',
-      error: false
+      error: false,
     }
   },
 
   methods: {
     // genero le task se ce n'è almeno una nell'array
-    isThereTasks() {
-      let thereAreTasks = false;
-      if(this.todos.length > 0) {
-        thereAreTasks = true;
-      } 
-      return thereAreTasks;
-    },
+    isThereTasks() {return this.todos.length > 0},
     // aggiungo la nuova task all'array
     addTask() {
       const compactString = this.taskInput.split(' ').join('');
@@ -37,11 +31,11 @@ createApp({
       }
     },
     // sbarro la task se completata
-    isDone(indexTask) {
-      if(this.todos[indexTask].done === false) {
-        this.todos[indexTask].done = true
+    isDone(currIndex) {
+      if(this.todos[currIndex].done === false) {
+        this.todos[currIndex].done = true
       } else {
-        this.todos[indexTask].done = false
+        this.todos[currIndex].done = false
       }
     },
     // cancello completamente la task
