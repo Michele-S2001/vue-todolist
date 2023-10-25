@@ -23,11 +23,13 @@
       </div>
 
       <ul class="task-wrap">
-        <li class="task">
-          {{ todos[0].text }}
+        <li class="task" v-for="(task, index) in todos">
+          {{ todos[index].text }}
           <i class="fa-solid fa-x"></i>
         </li>
       </ul>
+
+      <h3>NON HAI NULLA DA FARE 😜</h3>
 
     </div>
     <!-- end container -->
