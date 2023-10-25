@@ -48,6 +48,7 @@ input {
 .container {
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .cta {
@@ -85,6 +86,7 @@ input {
 
 .input-field {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 30px;
 }
@@ -102,7 +104,7 @@ input {
   
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .task i {
@@ -120,4 +122,5 @@ input {
   background-color: var(--grey);
   border-radius: 20px;
   user-select: none;
+  box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.76);
 }

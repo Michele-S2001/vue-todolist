@@ -24,7 +24,7 @@
       <!-- input field ==> input + button -->
       <div class="input-field">
         <!-- input field to write your task -->
-        <input @keyup.enter="addTask()" class="input-text" type="text" placeholder="Inserisci una task" v-model="taskInput">
+        <input @keyup.enter="addTask()" class="input-text" type="text" placeholder="Inserisci una task" v-model="taskInput" autofocus>
         <!-- submit task button -->
         <button @click="addTask()" class="cta">ADD</button>
       </div>
