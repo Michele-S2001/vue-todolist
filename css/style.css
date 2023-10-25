@@ -1,0 +1,29 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* PALETTE */
+html {
+  --black: #000;
+  --white: #FFF;
+  --grey: #DADADA;
+  --aqua: #0FE0D4;
+  --red: #FF0000;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
