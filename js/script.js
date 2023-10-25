@@ -6,6 +6,7 @@ createApp({
     return {
       todos: [],
       taskInput: '',
+      error: false
     }
   },
 
@@ -20,13 +21,20 @@ createApp({
     },
     // aggiungo la nuova task all'array
     addTask() {
-      this.todos.unshift(
-        {
-          text: this.taskInput,
-          done: false
-        }
-      );
-      this.taskInput = '';
+      const compactString = this.taskInput.split(' ').join('');
+
+      if(compactString !== '' && compactString.length > 5) {
+        this.todos.unshift(
+          {
+            text: this.taskInput,
+            done: false
+          }
+        );
+        this.taskInput = '';
+        this.error = false;
+      } else {
+        this.error = true;
+      }
     },
     // sbarro la task se completata
     isDone(indexTask) {

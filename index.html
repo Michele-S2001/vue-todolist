@@ -16,7 +16,7 @@
       <!-- title -->
       <h1 id="todo-title">TODO LIST</h1>
       <!-- error message -->
-      <span class="error">Inserire almeno 5 caratteri</span>
+      <span v-if="error" class="error">Inserire almeno 5 caratteri</span>
       <!-- input field ==> input + button -->
       <div class="input-field">
         <input @keyup.enter="addTask()" class="input-text" type="text" placeholder="Inserisci una task" v-model="taskInput">
