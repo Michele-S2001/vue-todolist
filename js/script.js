@@ -4,7 +4,12 @@ createApp({
 
   data() {
     return {
-      //variabili
+      todos: [
+        {
+          text: 'fare i compiti',
+          done: false
+        }
+      ]
     }
   },
 

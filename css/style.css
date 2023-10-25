@@ -27,3 +27,86 @@ menu {
   list-style: none;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: var(--aqua);
+  font-size: 1rem;
+}
+
+
+/* UTILITIES */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta {
+  border: 2px solid var(--black);
+  background-color: var(--aqua);
+  line-height: 30px;
+  padding: 0 15px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+
+/* APP */
+#app {
+  padding-top: 30px;
+}
+
+/* TITLE */
+#todo-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+/* INPUT FIELD */
+.error {
+  color: var(--red);
+  font-size: 15px;
+}
+
+.input-field {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.input-field .input-text {
+  flex-grow: 1;
+  border: 2px solid var(--black);
+  border-radius: 20px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+
+/* TASK WRAPPER */
+.task-wrap {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-wrap .task{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 15px;
+  background-color: var(--grey);
+  border-radius: 20px;
+}

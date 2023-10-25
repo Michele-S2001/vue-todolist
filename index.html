@@ -4,13 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vue - todo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
   
   <div id="app">
-    <!-- vue area -->
+    <!-- container -->
+    <div class="container">
+
+      <h1 id="todo-title">TODO LIST</h1>
+
+      <span class="error">Inserire almeno 5 caratteri</span>
+      <div class="input-field">
+        <input class="input-text" type="text" placeholder="Inserisci una task">
+        <button class="cta">ADD</button>
+      </div>
+
+      <ul class="task-wrap">
+        <li class="task">
+          {{ todos[0].text }}
+          <i class="fa-solid fa-x"></i>
+        </li>
+      </ul>
+
+    </div>
+    <!-- end container -->
   </div>
 
   <script src="./js/script.js"></script>
