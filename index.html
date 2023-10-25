@@ -13,23 +13,27 @@
   <div id="app">
     <!-- container -->
     <div class="container">
-
+      <!-- title -->
       <h1 id="todo-title">TODO LIST</h1>
-
+      <!-- error message -->
       <span class="error">Inserire almeno 5 caratteri</span>
+      <!-- input field ==> input + button -->
       <div class="input-field">
-        <input class="input-text" type="text" placeholder="Inserisci una task">
-        <button class="cta">ADD</button>
+        <input @keyup.enter="addTask()" class="input-text" type="text" placeholder="Inserisci una task" v-model="taskInput">
+        <button @click="addTask()" class="cta">ADD</button>
       </div>
 
-      <ul class="task-wrap">
-        <li class="task" v-for="(task, index) in todos">
-          {{ todos[index].text }}
+      <!-- Task section -->
+      <ul v-if="isThereTasks()" class="task-wrap">
+        <li class="task" v-for="(task, index) in todos" :key="index" @click="isDone(index)">
+          <p :class="{ taskDone: todos[index].done }">
+            {{ todos[index].text }}
+          </p>
           <i class="fa-solid fa-x"></i>
         </li>
       </ul>
 
-      <h3>NON HAI NULLA DA FARE 😜</h3>
+      <h3 v-else>NON HAI NULLA DA FARE 😜</h3>
 
     </div>
     <!-- end container -->
