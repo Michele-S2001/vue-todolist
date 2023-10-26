@@ -32,11 +32,7 @@ createApp({
     },
     // sbarro la task se completata
     isDone(task) {
-      if(task.done === false) {
-        task.done = true
-      } else {
-        task.done = false
-      }
+      task.done = !task.done
     },
     // cancello completamente la task
     deleteTask(currIndex) {
