@@ -31,11 +31,11 @@ createApp({
       }
     },
     // sbarro la task se completata
-    isDone(currIndex) {
-      if(this.todos[currIndex].done === false) {
-        this.todos[currIndex].done = true
+    isDone(task) {
+      if(task.done === false) {
+        task.done = true
       } else {
-        this.todos[currIndex].done = false
+        task.done = false
       }
     },
     // cancello completamente la task

@@ -32,7 +32,7 @@
       <!-- Task section -->
       <ul v-if="isThereTasks()" class="task-wrap">
         <!-- task template -->
-        <li class="task" v-for="(task, index) in todos" :key="index" @click="isDone(index)">
+        <li class="task" v-for="(task, index) in todos" :key="index" @click="isDone(task)">
           <p :class="{ taskDone: task.done }">
             {{ task.text }}
           </p>
